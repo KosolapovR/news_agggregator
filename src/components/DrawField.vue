@@ -1,20 +1,19 @@
 <template>
-  <div class="hello">
-  </div>
+  <div class="hello"></div>
 </template>
 
 <script>
 export default {
-  name: 'DrawField',
+  name: "DrawField",
   props: {
-    msg: String
+    msg: String,
   },
   methods: {
-    log(){
-      console.log(this.$store.state.count)
-    }
-  }
-}
+    log() {
+      console.log(this.$store.state.count);
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

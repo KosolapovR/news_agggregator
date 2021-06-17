@@ -1,49 +1,50 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Dashboard from '../views/Dashboard.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Dashboard from "../views/Dashboard.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Dashboard',
-    component: Dashboard
+    path: "/",
+    name: "Dashboard",
+    component: Dashboard,
   },
   {
-    path: '/profile',
-    name: 'Profile',
+    path: "/profile",
+    name: "Profile",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "profile" */ '../views/Profile.vue')
+    component: () =>
+      import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
   },
   {
-    path: '/sport',
-    name: 'Sport',
-    component: () => import('../views/Sport.vue')
+    path: "/sport",
+    name: "Sport",
+    component: () => import("../views/Sport.vue"),
   },
   {
-    path: '/programming',
-    name: 'Programming',
-    component: () => import('../views/Programming.vue')
+    path: "/programming",
+    name: "Programming",
+    component: () => import("../views/Programming.vue"),
   },
   {
-    path: '/science',
-    name: 'Science',
-    component: () => import('../views/Science.vue')
+    path: "/science",
+    name: "Science",
+    component: () => import("../views/Science.vue"),
   },
   {
-    path: '/travel',
-    name: 'Travel',
-    component: () => import('../views/Travel.vue')
-  }
-]
+    path: "/travel",
+    name: "Travel",
+    component: () => import("../views/Travel.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
