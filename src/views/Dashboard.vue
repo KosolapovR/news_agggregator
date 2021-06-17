@@ -11,7 +11,6 @@ import DrawField from "@/components/DrawField.vue";
 
 export default {
   name: "Home",
-
   components: {
     DrawField,
   },
